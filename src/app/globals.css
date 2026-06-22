@@ -1,26 +1,194 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Brand Colors */
+  --color-navy-50: #f4f6f9;
+  --color-navy-100: #e4e9f0;
+  --color-navy-200: #c1ccd9;
+  --color-navy-300: #93a6be;
+  --color-navy-400: #627ca0;
+  --color-navy-500: #425f84;
+  --color-navy-600: #334b6b;
+  --color-navy-700: #273952;
+  --color-navy-800: #0b192c; /* Primary Deep Navy */
+  --color-navy-900: #081220;
+  --color-navy-950: #040910;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-gold-50: #fbf9f4;
+  --color-gold-100: #f4ece0;
+  --color-gold-200: #e7d5bd;
+  --color-gold-300: #d6b994;
+  --color-gold-400: #c5a880; /* Primary Gold Accent */
+  --color-gold-500: #b59469;
+  --color-gold-600: #a07d54;
+  --color-gold-700: #816240;
+  --color-gold-800: #62482f;
+  --color-gold-900: #44301f;
+  --color-gold-950: #291b10;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-slate-50: #f8fafc; /* Premium Off-White */
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155; /* Slate Gray */
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  /* Accent aliases for design guidelines */
+  --color-brand-navy: var(--color-navy-800);
+  --color-brand-navy-light: #162a45;
+  --color-brand-gold: var(--color-gold-400);
+  --color-brand-gold-hover: #bda078;
+  --color-brand-slate: var(--color-slate-700);
+  --color-brand-slate-light: var(--color-slate-500);
+  --color-brand-offwhite: var(--color-slate-50);
+
+  /* Fonts */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+
+  /* Typography Scales */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  /* Animations & Transitions */
+  --animate-fade-in: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up: slide-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-down: slide-down 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scale-up: scale-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes scale-up {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Existing global styles */
+
+/* Premium Logo animation */
+@keyframes logoPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+
+.logo-animate {
+  animation: logoPulse 4s ease-in-out infinite;
+}
+
+/* Custom Base Layer */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-navy-950);
+    color: var(--color-slate-100);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  /* Accessible outline style for keyboard focus */
+  *:focus-visible {
+    outline: 2px solid var(--color-gold-400);
+    outline-offset: 4px;
+  }
+
+  /* Selection styling */
+  ::selection {
+    background-color: var(--color-gold-400);
+    color: var(--color-navy-950);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    color: var(--color-slate-50);
+  }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  .text-shadow-md {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Luxury gold text clip gradient */
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #c5a880 0%, #ecdab7 50%, #b59469 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Soft glassmorphism utility */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+
+  .glass-card-dark {
+    background: rgba(11, 25, 44, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Subtle gold borders */
+  .border-gold-subtle {
+    border-color: rgba(197, 168, 128, 0.2);
+  }
 }
