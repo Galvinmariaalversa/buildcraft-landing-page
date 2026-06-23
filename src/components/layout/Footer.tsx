@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { FiInstagram, FiLinkedin, FiFacebook, FiMapPin, FiPhone, FiMail } from "react-icons/fi";
+import Logo from "./Logo";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -31,10 +32,8 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 md:py-24 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
         {/* Brand & Bio Column */}
         <div className="flex flex-col gap-6">
-          <Link href="/" className="flex items-center gap-3 focus:outline-none">
-            <span className="w-10 h-10 bg-gold-400 text-navy-800 font-heading font-black text-xl flex items-center justify-center">
-              B
-            </span>
+          <Link href="/" className="flex items-center gap-3 focus:outline-none group">
+            <Logo className="w-10 h-10 logo-animate group-hover:rotate-6 transition-transform duration-500" />
             <span className="flex flex-col">
               <span className="font-heading font-bold text-lg tracking-widest text-slate-100 uppercase leading-none">
                 BuildCraft
