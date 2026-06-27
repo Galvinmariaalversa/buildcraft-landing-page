@@ -160,9 +160,9 @@ export const Testimonials: React.FC = () => {
                 />
               </div>
               <div>
-                <h4 className="font-heading text-sm font-bold uppercase tracking-wider text-white">
+                <h3 className="font-heading text-sm font-bold uppercase tracking-wider text-white">
                   {test.name}
-                </h4>
+                </h3>
                 <p className="text-xs text-slate-400 font-medium mt-0.5">
                   {test.role}
                 </p>

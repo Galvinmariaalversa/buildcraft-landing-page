@@ -85,9 +85,9 @@ export const About: React.FC = () => {
                   <FiCheck className="w-3.5 h-3.5" />
                 </div>
                 <div>
-                  <h4 className="font-heading text-sm font-semibold uppercase text-white tracking-wider mb-1">
+                  <h3 className="font-heading text-sm font-semibold uppercase text-white tracking-wider mb-1">
                     {val.title}
-                  </h4>
+                  </h3>
                   <p className="text-xs text-slate-400 font-light leading-normal">
                     {val.desc}
                   </p>

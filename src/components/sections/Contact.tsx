@@ -160,9 +160,9 @@ export const Contact: React.FC = () => {
                 <FiMapPin className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="font-heading text-xs uppercase tracking-wider text-slate-400 font-bold mb-1">
+                <h3 className="font-heading text-xs uppercase tracking-wider text-slate-400 font-bold mb-1">
                   Head Office Address
-                </h4>
+                </h3>
                 <p className="text-sm text-white font-light leading-relaxed">
                   100 Luxury Avenue, Suite 500, New York, NY 10001
                 </p>
@@ -174,9 +174,9 @@ export const Contact: React.FC = () => {
                 <FiPhone className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="font-heading text-xs uppercase tracking-wider text-slate-400 font-bold mb-1">
+                <h3 className="font-heading text-xs uppercase tracking-wider text-slate-400 font-bold mb-1">
                   Corporate Inquiries
-                </h4>
+                </h3>
                 <a
                   href="tel:+18005550199"
                   className="text-sm text-white hover:text-gold-400 transition-colors font-light block"
@@ -191,9 +191,9 @@ export const Contact: React.FC = () => {
                 <FiMail className="w-4 h-4" />
               </div>
               <div>
-                <h4 className="font-heading text-xs uppercase tracking-wider text-slate-400 font-bold mb-1">
+                <h3 className="font-heading text-xs uppercase tracking-wider text-slate-400 font-bold mb-1">
                   General Projects Email
-                </h4>
+                </h3>
                 <a
                   href="mailto:info@buildcraft.com"
                   className="text-sm text-white hover:text-gold-400 transition-colors font-light block"
@@ -221,7 +221,7 @@ export const Contact: React.FC = () => {
               <span className="font-heading text-xs font-bold uppercase tracking-wider text-white">
                 Interactive Map View
               </span>
-              <p className="text-[10px] text-slate-500 uppercase tracking-widest mt-1">
+              <p className="text-[10px] text-slate-400 uppercase tracking-widest mt-1">
                 40.7128° N, 74.0060° W
               </p>
             </div>

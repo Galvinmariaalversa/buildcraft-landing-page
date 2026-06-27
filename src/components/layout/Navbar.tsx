@@ -160,7 +160,7 @@ export const Navbar: React.FC = () => {
                 Inquire Now
               </Button>
               <div className="mt-8 text-center">
-                <p className="text-[10px] uppercase tracking-widest text-slate-500">
+                <p className="text-[10px] uppercase tracking-widest text-slate-400">
                   BuildCraft Constructions
                 </p>
                 <p className="text-[11px] text-slate-400 mt-1">info@buildcraft.com</p>
