@@ -26,7 +26,7 @@ export const ProjectsShowcase: React.FC = () => {
       title: "The Crestview Villa",
       category: "Residential",
       location: "Beverly Hills, CA",
-      image: "/project_villa.png",
+      image: "/project_villa.webp",
       description:
         "A custom 12,000 sq ft luxury estate featuring architectural concrete, a sleek cantilevered infinity pool, and state-of-the-art automation.",
     },
@@ -35,7 +35,7 @@ export const ProjectsShowcase: React.FC = () => {
       title: "Apex Plaza Tower",
       category: "Commercial",
       location: "Manhattan, NY",
-      image: "/project_office.png",
+      image: "/project_office.webp",
       description:
         "A modern 32-story corporate headquarters with energy-efficient glazed glass walls and high-performance LEED Gold building infrastructure.",
     },
@@ -44,7 +44,7 @@ export const ProjectsShowcase: React.FC = () => {
       title: "The Meridian Residences",
       category: "Residential",
       location: "Miami, FL",
-      image: "/project_apartment.png",
+      image: "/project_apartment.webp",
       description:
         "An elite waterfront residential complex containing 45 bespoke units, green rooftops, and high-wind structural resilience engineering.",
     },
@@ -53,7 +53,7 @@ export const ProjectsShowcase: React.FC = () => {
       title: "Aspen Chalet Renovation",
       category: "Renovation",
       location: "Aspen, CO",
-      image: "/project_renovation.png",
+      image: "/project_renovation.webp",
       description:
         "A full interior transformation of a luxury mountain lodge combining timber framing, modern smart lighting, and custom stonework.",
     },

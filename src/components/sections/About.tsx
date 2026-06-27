@@ -109,7 +109,7 @@ export const About: React.FC = () => {
           >
             <div className="relative w-full h-full overflow-hidden">
               <Image
-                src="/about_company.png"
+                src="/about_company.webp"
                 alt="Luxury building interior architecture by BuildCraft Constructions"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

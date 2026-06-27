@@ -22,7 +22,7 @@ export const Testimonials: React.FC = () => {
       role: "CEO, Vance Holdings",
       projectType: "Apex Plaza Tower (Commercial)",
       review: "BuildCraft delivered our corporate headquarters ahead of schedule and with structural execution that exceeded our expectations. Their transparent accounting and daily reporting minimized project risks entirely.",
-      avatar: "/avatar_1.png",
+      avatar: "/avatar_1.webp",
       rating: 5,
     },
     {
@@ -30,7 +30,7 @@ export const Testimonials: React.FC = () => {
       role: "Lead Architect, Elena Designs",
       projectType: "Crestview Villa (Residential)",
       review: "As an architect, finding a builder that respects specific material tolerances and design lines is rare. BuildCraft is that builder. They executed my vision to absolute precision.",
-      avatar: "/avatar_2.png",
+      avatar: "/avatar_2.webp",
       rating: 5,
     },
     {
@@ -38,7 +38,7 @@ export const Testimonials: React.FC = () => {
       role: "Real Estate Investor",
       projectType: "Waterfront Development (Residential)",
       review: "We worked with BuildCraft on a multi-family waterfront complex. Their understanding of high-wind load engineering, local permit requirements, and luxury finishes makes them the premier developer in the region.",
-      avatar: "/avatar_3.png",
+      avatar: "/avatar_3.webp",
       rating: 5,
     },
     {
@@ -46,7 +46,7 @@ export const Testimonials: React.FC = () => {
       role: "Private Homeowner",
       projectType: "Bespoke Penthouse Renovation (Renovation)",
       review: "The team transformed our heritage penthouse into a modern architectural wonder. The custom stone detailing and intelligent lighting layouts are spectacular. An unmatched luxury finish.",
-      avatar: "/avatar_4.png",
+      avatar: "/avatar_4.webp",
       rating: 5,
     },
   ];

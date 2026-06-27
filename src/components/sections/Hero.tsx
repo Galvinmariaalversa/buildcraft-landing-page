@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
       {/* Full-bleed background image with modern luxury dark overlays */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hero_bg.png"
+          src="/hero_bg.webp"
           alt="Luxury architectural building under sunset"
           fill
           priority

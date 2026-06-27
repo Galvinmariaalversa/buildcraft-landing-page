@@ -1,16 +1,17 @@
-"use client";
-
 import React from "react";
+import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Services from "@/components/sections/Services";
-import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import ProjectsShowcase from "@/components/sections/ProjectsShowcase";
-import Timeline from "@/components/sections/Timeline";
-import Stats from "@/components/sections/Stats";
-import Testimonials from "@/components/sections/Testimonials";
-import FAQ from "@/components/sections/FAQ";
-import Contact from "@/components/sections/Contact";
+
+// Dynamic imports for sections below the fold to enable client-side code-splitting
+const About = dynamic(() => import("@/components/sections/About"));
+const Services = dynamic(() => import("@/components/sections/Services"));
+const WhyChooseUs = dynamic(() => import("@/components/sections/WhyChooseUs"));
+const ProjectsShowcase = dynamic(() => import("@/components/sections/ProjectsShowcase"));
+const Timeline = dynamic(() => import("@/components/sections/Timeline"));
+const Stats = dynamic(() => import("@/components/sections/Stats"));
+const Testimonials = dynamic(() => import("@/components/sections/Testimonials"));
+const FAQ = dynamic(() => import("@/components/sections/FAQ"));
+const Contact = dynamic(() => import("@/components/sections/Contact"));
 
 export default function Home() {
   return (
